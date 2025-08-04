@@ -1,5 +1,9 @@
 package lk.ijse.edu.springbootdeployment.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  * --------------------------------------------
  * @Author Dimantha Kaveen
@@ -9,6 +13,12 @@ package lk.ijse.edu.springbootdeployment.controller;
  * @Project SpringBootDeployment
  * --------------------------------------------
  **/
- 
-  public class CustomerController {
+
+@RestController
+@RequestMapping("/api/v1/customer")
+public class CustomerController {
+    @GetMapping
+    public String getCustomer () {
+        return "Customer data retrieved successfully!";
+    }
 }
