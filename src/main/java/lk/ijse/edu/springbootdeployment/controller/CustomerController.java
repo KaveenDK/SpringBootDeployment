@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerController {
     private final CustomerService customerService;
 
-    @GetMapping
+    @GetMapping({"", "/"})
     public String getCustomer () {
         return "Customer data retrieved successfully!";
     }
