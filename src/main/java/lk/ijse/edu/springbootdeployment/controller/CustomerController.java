@@ -30,7 +30,7 @@ public class CustomerController {
         return "Customer data retrieved successfully!";
     }
 
-    @PostMapping("/save")
+    @PostMapping
     public ResponseEntity<ApiResponse<CustomerDTO>> saveCustomer(@RequestBody CustomerDTO customer) {
         return new ResponseEntity<>(new ApiResponse<>(
                 200,
